@@ -33,7 +33,7 @@ private:
 	BSTNode<E>* insertAux(BSTNode<E>* current, E element) {
 		if (current == nullptr)
 			return new BSTNode<E>(element);
-		// este caso es para cuando el árbol no acepta repetidos
+		// No duplicated elements allowed
 		if (element == current->element)
 			throw runtime_error("Duplicated element.");
 		if (element < current->element) 

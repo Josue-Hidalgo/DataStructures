@@ -24,6 +24,12 @@ public:
 		left = right = nullptr;
 	}
 
+	BSTNode(E element, BSTNode<E>* left, BSTNode<E>* right) {
+		this->element = element;
+		this->left = left;
+		this->right = right;
+	}
+
 	int childrenCount() {
 		return (left == nullptr? 0 : 1) + (right == nullptr? 0 : 1);
 	}
