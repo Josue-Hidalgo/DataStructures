@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Archivos de origen">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Archivos de encabezado">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Archivos de recursos">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Listas">
+      <UniqueIdentifier>{6e6c7dc0-20bc-494f-8dcf-19555156abef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Listas\Ordenadas">
+      <UniqueIdentifier>{26fd4032-77ce-4f40-9380-7cc87a0d27f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Listas\No Ordenadas">
+      <UniqueIdentifier>{0a16271a-2ad9-4928-a8dd-b5ec1c65fd24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Listas\ClasesAbstractas">
+      <UniqueIdentifier>{29a467f2-1bf1-40df-add9-a1acf5a0ed77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Colas">
+      <UniqueIdentifier>{ce7268aa-b0ca-4ad1-9da4-675f13d26577}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Pilas">
+      <UniqueIdentifier>{c0601b79-2d2c-4421-818e-d0a927fdc8e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Colas\ColasPrioridad">
+      <UniqueIdentifier>{6b512518-21a1-4338-baab-5baf7ab59ddb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Colas\ColasPrioridad\ClaseAbstracta">
+      <UniqueIdentifier>{1ee27aaf-43d8-44d5-b2f6-32e501558858}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Colas\ColasPrioridad\Clases">
+      <UniqueIdentifier>{29353b98-2bf0-4b10-ae63-747d27f1b73e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Colas\Clase Abstracta">
+      <UniqueIdentifier>{297181e1-59f8-4246-bdd1-cbd2ff85c8a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Colas\Clases">
+      <UniqueIdentifier>{59a66d10-d3f5-474c-93e1-078a35c69abb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Colección">
+      <UniqueIdentifier>{6b0a2b6f-2cf8-4ef8-b90a-e1923fe18166}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Tupla">
+      <UniqueIdentifier>{c6b0b732-9180-4687-b5c3-1624ff1ca7f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Pilas\ClaseAbstracta">
+      <UniqueIdentifier>{b5560786-da59-4864-8525-b8264dd36ea2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Pilas\Clases">
+      <UniqueIdentifier>{8e805574-1ac0-477d-98b0-54d766fe6290}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Árboles">
+      <UniqueIdentifier>{b811c8ad-1ade-4ec9-a228-fc129178c8b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Nodos">
+      <UniqueIdentifier>{fa1ec8da-03a0-4ffa-883a-f3908b01918b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Diccionarios">
+      <UniqueIdentifier>{aa891c03-4a82-407c-97d4-580268adc3a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Diccionarios\ClaseAbstracta">
+      <UniqueIdentifier>{cb2b0da1-3813-4730-9ff9-5cb78ca43b5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Diccionarios\Clases">
+      <UniqueIdentifier>{6bddb3d9-6441-4be5-9e83-7afa32247a8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Macros">
+      <UniqueIdentifier>{29661f0a-75b0-46d3-a73b-0c7a80d6d48b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DataStructures.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SortedArrayList.h">
+      <Filter>Archivos de encabezado\Listas\Ordenadas</Filter>
+    </ClInclude>
+    <ClInclude Include="OrderedArrayList.h">
+      <Filter>Archivos de encabezado\Listas\Ordenadas</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrayList.h">
+      <Filter>Archivos de encabezado\Listas\No Ordenadas</Filter>
+    </ClInclude>
+    <ClInclude Include="CircleList.h">
+      <Filter>Archivos de encabezado\Listas\No Ordenadas</Filter>
+    </ClInclude>
+    <ClInclude Include="DLinkedList.h">
+      <Filter>Archivos de encabezado\Listas\No Ordenadas</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedList.h">
+      <Filter>Archivos de encabezado\Listas\No Ordenadas</Filter>
+    </ClInclude>
+    <ClInclude Include="DCircleList.h">
+      <Filter>Archivos de encabezado\Listas\No Ordenadas</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>Archivos de encabezado\Nodos</Filter>
+    </ClInclude>
+    <ClInclude Include="DNode.h">
+      <Filter>Archivos de encabezado\Nodos</Filter>
+    </ClInclude>
+    <ClInclude Include="List.h">
+      <Filter>Archivos de encabezado\Listas\ClasesAbstractas</Filter>
+    </ClInclude>
+    <ClInclude Include="CList.h">
+      <Filter>Archivos de encabezado\Listas\ClasesAbstractas</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>Archivos de encabezado\Colección</Filter>
+    </ClInclude>
+    <ClInclude Include="KVPair.h">
+      <Filter>Archivos de encabezado\Tupla</Filter>
+    </ClInclude>
+    <ClInclude Include="MinHeap.h">
+      <Filter>Archivos de encabezado\Árboles</Filter>
+    </ClInclude>
+    <ClInclude Include="HeapPriorityQueue.h">
+      <Filter>Archivos de encabezado\Colas\ColasPrioridad\Clases</Filter>
+    </ClInclude>
+    <ClInclude Include="Def.h">
+      <Filter>Archivos de encabezado\Macros</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrayQueue.h">
+      <Filter>Archivos de encabezado\Colas\Clases</Filter>
+    </ClInclude>
+    <ClInclude Include="Stack.h">
+      <Filter>Archivos de encabezado\Pilas\ClaseAbstracta</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrayStack.h">
+      <Filter>Archivos de encabezado\Pilas\Clases</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedStack.h">
+      <Filter>Archivos de encabezado\Pilas\Clases</Filter>
+    </ClInclude>
+    <ClInclude Include="AVLTree.h">
+      <Filter>Archivos de encabezado\Árboles</Filter>
+    </ClInclude>
+    <ClInclude Include="BSTree.h">
+      <Filter>Archivos de encabezado\Árboles</Filter>
+    </ClInclude>
+    <ClInclude Include="BSTNode.h">
+      <Filter>Archivos de encabezado\Nodos</Filter>
+    </ClInclude>
+    <ClInclude Include="Dictionary.h">
+      <Filter>Archivos de encabezado\Diccionarios\ClaseAbstracta</Filter>
+    </ClInclude>
+    <ClInclude Include="UnsortedArrayDictionary.h">
+      <Filter>Archivos de encabezado\Diccionarios\Clases</Filter>
+    </ClInclude>
+    <ClInclude Include="BSTDictionary.h">
+      <Filter>Archivos de encabezado\Diccionarios\Clases</Filter>
+    </ClInclude>
+    <ClInclude Include="HashTable.h">
+      <Filter>Archivos de encabezado\Diccionarios\Clases</Filter>
+    </ClInclude>
+    <ClInclude Include="SortedDLinkedList.h">
+      <Filter>Archivos de encabezado\Listas\Ordenadas</Filter>
+    </ClInclude>
+    <ClInclude Include="PriorityQueue.h">
+      <Filter>Archivos de encabezado\Colas\ColasPrioridad\ClaseAbstracta</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedPriorityQueue.h">
+      <Filter>Archivos de encabezado\Colas\ColasPrioridad\Clases</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedQueue.h">
+      <Filter>Archivos de encabezado\Colas\Clases</Filter>
+    </ClInclude>
+    <ClInclude Include="Queue.h">
+      <Filter>Archivos de encabezado\Colas\Clase Abstracta</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
