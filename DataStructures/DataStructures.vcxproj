@@ -158,8 +158,10 @@
     <ClInclude Include="OrderedArrayList.h" />
     <ClInclude Include="PriorityQueue.h" />
     <ClInclude Include="Queue.h" />
+    <ClInclude Include="SNode.h" />
     <ClInclude Include="SortedArrayList.h" />
     <ClInclude Include="SortedDLinkedList.h" />
+    <ClInclude Include="SplayTree.h" />
     <ClInclude Include="Stack.h" />
     <ClInclude Include="UnsortedArrayDictionary.h" />
   </ItemGroup>
