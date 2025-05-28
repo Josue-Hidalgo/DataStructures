@@ -17,6 +17,7 @@
 
 #include <stdexcept>
 #include <iostream>
+#include "Def.h"
 
 using std::runtime_error;
 using std::cout;

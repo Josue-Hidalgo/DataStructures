@@ -18,6 +18,7 @@
 #include "PriorityQueue.h"
 #include "MinHeap.h"
 #include "KVPair.h"
+#include "Def.h"
 
 using std::runtime_error;
 
