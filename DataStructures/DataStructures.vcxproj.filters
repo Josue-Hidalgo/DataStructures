@@ -191,5 +191,8 @@
     <ClInclude Include="TrieNode.h">
       <Filter>Archivos de encabezado\Nodos</Filter>
     </ClInclude>
+    <ClInclude Include="MaxHeap.h">
+      <Filter>Archivos de encabezado\Árboles</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

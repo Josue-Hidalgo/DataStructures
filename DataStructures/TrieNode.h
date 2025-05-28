@@ -7,7 +7,7 @@
  * de datos Trie. Cada nodo contiene información sobre si es un
  * nodo final de una palabra, el conteo de prefijos que pasan.
  * 
- * 
+ * Autor: Mauricio Avilés
  * 
  */
 
