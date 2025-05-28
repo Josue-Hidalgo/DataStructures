@@ -36,20 +36,20 @@ private:
     SNode<E>* insertAux(SNode<E> *current, E element) {
         if (current == nullptr) { 
             SNode<E> *result = new SNode<E>(element);
-            last = result; // antes de retornar se actualiza last para que apunte al nodo nuevo
+            last = result; 
             return result;
         }
         if (element == current->element) {
-            last = current; // también se hace cuando el valor a insertar está repetido
+            last = current;
             throw runtime_error("Duplicated element.");
         }
         if (element < current->element) {
             current->left = insertAux(current->left, element);
-            current->left->parent = current; // después de insertar en el subárbol derecho, se actualiza
-            return current;                  // el puntero parent del nodo recibido para que apunte al actual.
+            current->left->parent = current;
+            return current;
         } else {
             current->right = insertAux(current->right, element);
-            current->right->parent = current; // mismo del caso anterior
+            current->right->parent = current;
             return current;
         }
     }
@@ -130,6 +130,7 @@ private:
         }
         // ElementoBuscar == Actual
         *result = current->element;
+        last = current->parent;
 
         // ¿Tiene Hijos?
 
@@ -147,7 +148,7 @@ private:
             return onlyChild;
         }
         // Tiene dos hijos: buscar sucesor, intercambiar y eliminar sucesor
-        SNode<E>* successor = getSuccessor(current->right);
+        SNode<E>* successor = getSuccessor(current);
         swap(current, successor);
         current->right = removeAux(current->right, element, result);
         if (current->right != nullptr)
@@ -211,7 +212,6 @@ private:
         
         //Intercambio de Papás
         temp->parent = current->parent;
-        current->parent = temp;
 
         // Mi segundo nieto ahora será mi hijo
         current->left = temp->right;
@@ -221,6 +221,9 @@ private:
 
         // El nuevo papá reconoce a su antiguo papá como hijo
         temp->right = current;
+        
+        //Intercambio de Papás
+        current->parent = temp;
 
         // Si el que ANTES era papa era Papá Supremo ahora lo será el nuevo papá (temp)
         // Sino si mi papá esta apuntando por uno u otro lado al que ahora es mi hijo
@@ -248,7 +251,6 @@ private:
         
         //Intercambio de Papás
         temp->parent = current->parent;
-        current->parent = temp;
 
         // Mi primer nieto ahora será mi segundo hijo
         current->right = temp->left;
@@ -258,60 +260,64 @@ private:
 
         // El nuevo papá reconoce a su antiguo papá como hijo
         temp->left = current;
+
+        //Intercambio de Papás
+        current->parent = temp;
         
         // Si el que ANTES era papa era Papá Supremo ahora lo será el nuevo papá (temp)
         // Sino si mi papá esta apuntando por uno u otro lado al que ahora es mi hijo
         // entonces reconozcame como su nuevo hijo.
         if (current == root)
             root = temp;
-        else if (temp->parent->right == current)
-            temp->parent->right = temp;
-        else
+        else if (temp->parent->left == current)
             temp->parent->left = temp;
+        else
+            temp->parent->right = temp;
     }
 
     void splay() {
         // Last ya esta en la raíz
         if (last == nullptr || last == root)
             return;
-
         // Hasta que last esté en la raíz
         while (last != root) {
-
             // Si es hijo
-            if (last->parent == root) {
-                if (root->right == last)
-                    rotateLeft(root);
-                else
-                    rotateRight(root);
+            if (root->right == last) {
+                rotateLeft(root);
+                return; 
+            }
+            else if (root->left == last) {
+                rotateRight(root);
+                return;
             }
             // Si es Nieto
-            else {
                 // Busque el abuelo
-                SNode<E>* grand = last->parent->parent;
-                
-                bool isLeftChild = (last->parent->left == last);
-                bool isParentLeftChild = (grand->left == last->parent);
-
-                // ZigZig (L-L)
-                if (isLeftChild && isParentLeftChild) {
+            SNode<E>* grand = last->parent->parent;
+			SNode<E>* parent = last->parent;
+            // Casos de la izquierda
+            if (parent == grand->left) {
+                // L-L
+                if (last == parent->left) {
                     rotateRight(grand);
-                    rotateRight(last->parent);
+                    rotateRight(parent);
                 }
-                // ZigZig (R-R)
-                else if (!isLeftChild && !isParentLeftChild) {
-                    rotateLeft(grand);
-                    rotateLeft(last->parent);
-                }
-                // ZigZag (L-R)
-                else if (!isLeftChild && isParentLeftChild) {
-                    rotateLeft(last->parent);
-                    rotateRight(last->parent);
-                }
-                // ZigZag (R-L)
+                // L-R
                 else {
-                    rotateRight(last->parent);
-                    rotateLeft(last->parent);
+                    rotateLeft(parent);
+                    rotateRight(grand);
+                }
+            }
+            // Casos de la derecha
+            else {
+                // R-R
+                if (last == parent->right) {
+                    rotateLeft(grand);
+                    rotateLeft(parent);
+                }
+                // R-L
+                else {
+                    rotateRight(parent);
+                    rotateLeft(grand);
                 }
             }
         }
