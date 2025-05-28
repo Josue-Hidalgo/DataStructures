@@ -79,9 +79,6 @@ private:
             return findPointerAux(current->right, element);
     }
 
-    // Funciona similar al contains de BST, pero debe actualizar
-    // last para recordar el último nodo accedido.
-
     bool containsAux(SNode<E> *current, E element) {
         // Caso Base
         if (current == nullptr)
@@ -96,14 +93,6 @@ private:
         else
             return containsAux(current->right, element);
     }
-
-    // Similar al remove del BST, mismos casos.
-    // Cuidados que hay que tener:
-    // 1. Actualizar last con el último nodo que se accedió antes de
-    //    encontrar el que se va a eliminar.
-    // 2. Cada vez que se hace una llamada recursiva para mandar a 
-    //    borrar el elemento de uno de los subárboles, actualizar el
-    //    padre del subárbol modificado, de forma similar que en insert.
 
     SNode<E>* removeAux(SNode<E>* current, E element, E* result) {
         if (current == nullptr)

@@ -163,6 +163,8 @@
     <ClInclude Include="SortedDLinkedList.h" />
     <ClInclude Include="SplayTree.h" />
     <ClInclude Include="Stack.h" />
+    <ClInclude Include="Trie.h" />
+    <ClInclude Include="TrieNode.h" />
     <ClInclude Include="UnsortedArrayDictionary.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
