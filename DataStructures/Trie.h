@@ -8,7 +8,7 @@
  * y que además permite realizar operaciones como
  * busqueda por prefijo y palabra.
  * 
- * Autor: Mauricio Avilés
+ * Autor: Mauricio Avilés // Josué Hidalgo 
  * 
  */
 
@@ -63,10 +63,12 @@ public:
 	Trie() {
 		root = new TrieNode();
 	}
+
 	~Trie() {
 		clear();
 		delete root;
 	}
+
 	void insert(string word) {
 		// no va a aceptar palabras repetidas.
 		if (containsWord(word))
@@ -81,21 +83,25 @@ public:
 		current->prefixCount++;
 		current->isFinal = true;
 	}
+
 	bool containsWord(string word) {
 		TrieNode* current = findNode(word);
 		if (current == nullptr) return false;
 		return current->isFinal;
 	}
+
 	bool containsPrefix(string prefix) {
 		TrieNode* current = findNode(prefix);
 		if (current == nullptr) return false;
 		return true;
 	}
+
 	int prefixCount(string prefix) {
 		TrieNode* current = findNode(prefix);
 		if (current == nullptr) return 0;
 		return current->prefixCount;
 	}
+
 	void remove(string word) {
 		if (!containsWord(word))
 			throw runtime_error("Word not found.");
@@ -119,7 +125,7 @@ public:
 		clearAux(root);
 		root = new TrieNode();
 	}
-	
+
 	List<string>* getMatches(string prefix) {
 		List<string>* matches = new DLinkedList<string>();
 		TrieNode* current = findNode(prefix);
