@@ -241,6 +241,19 @@ public:
         return values;
     }
 
+    List<KVPair<K, V>>* getPairs() {
+        List<KVPair<K, V>>* pairs = new DLinkedList<KVPair<K, V>>();
+        for (int i = 0; i < max; i++) {
+            buckets[i].goToStart();
+            while (!buckets[i].atEnd()) {
+                KVPair<K, V> p = buckets[i].getElement();
+                pairs->append(p);
+                buckets[i].next();
+            }
+        }
+        return pairs;
+    }
+
     int getSize() {
         return size;
     }

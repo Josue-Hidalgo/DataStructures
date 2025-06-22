@@ -163,6 +163,7 @@
     <ClInclude Include="SortedArrayList.h" />
     <ClInclude Include="SortedDLinkedList.h" />
     <ClInclude Include="SplayTree.h" />
+    <ClInclude Include="SplayTreeDictionary.h" />
     <ClInclude Include="Stack.h" />
     <ClInclude Include="Trie.h" />
     <ClInclude Include="TrieNode.h" />

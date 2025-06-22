@@ -194,5 +194,8 @@
     <ClInclude Include="MaxHeap.h">
       <Filter>Archivos de encabezado\Árboles</Filter>
     </ClInclude>
+    <ClInclude Include="SplayTreeDictionary.h">
+      <Filter>Archivos de encabezado\Diccionarios\Clases</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
